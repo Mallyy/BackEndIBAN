@@ -18,7 +18,8 @@ public class BackEndIBANController {
 
     @GetMapping(value = "/", produces = "application/json")
     public ResponseEntity checkIBAN(){
-        return new ResponseEntity(service.getIBAN(), HttpStatus.OK);
+        
+        return new ResponseEntity(service.checkIBAN(IBAN), HttpStatus.OK);
     }
 
 }
